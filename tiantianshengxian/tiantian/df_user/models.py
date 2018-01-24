@@ -12,9 +12,9 @@ class UserInfo(models.Model):
     #邮箱
     uemail = models.CharField(max_length = 20)
     #收货地址
-    uaddress = models.CharField(max_length = 100)
+    uaddress = models.CharField(max_length = 100, default = '')
     #电话
-    uphone = models.CharField(max_length = 11)
+    uphone = models.CharField(max_length = 11, default = '')
 
 
 class AddresseeInfo(models.Model):
