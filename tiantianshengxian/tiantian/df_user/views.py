@@ -28,5 +28,7 @@ def register_handle(request):
     user.uname = uname
     user.upwd = upwd1
     user.uemail = uemail
+    # 别忘了save否则无法上传到数据库
+    user.save()
     #注册成功，转到登录页
     return redirect('/user/login/')
