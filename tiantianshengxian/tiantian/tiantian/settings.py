@@ -25,7 +25,7 @@ SECRET_KEY = 'pg94k(1@58(5sewfaql#v+jf-uuy506*(&9g2ptm5h*^je0f8*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
