@@ -97,13 +97,20 @@ def order(request):
 
 def site(request):
     '''收货地址'''
-    user = UserInfo.objects.get(id=request.session['user_id'])
+
+    aaaddresser = AddresseeInfo()
+
     if request.method == 'POST':
         post = request.POST
-        user.addresseeinfo_set.aaddressee = post.get('ushou')
-        user.addresseeinfo_set.aaddress = post.get('uaddress')
-        user.addresseeinfo_set.ayoubian = post.get('uyoubian')
-        user.addresseeinfo_set.aphone = post.get('uphone')
-        user.addresseeinfo_set.save()
-    context = {'title': '用户中心'}
+        aaaddresser.aaddressee = post.get('ushou')
+        aaaddresser.aaddress = post.get('uaddress')
+        aaaddresser.ayoubian = post.get('uyoubian')
+        aaaddresser.aphone = post.get('uphone')
+        aaaddresser.auser_id = request.session['user_id']
+        aaaddresser.save()
+    context = {'title': '用户中心',
+               'ushou': aaaddresser.aaddressee,
+               'uaddress': aaaddresser.aaddress,
+               'uyoubian': aaaddresser.ayoubian,
+               'uphone': aaaddresser.aphone}
     return render(request, 'df_user/user_center_site.html', context)
