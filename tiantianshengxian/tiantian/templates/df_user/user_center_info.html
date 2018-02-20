@@ -1,31 +1,9 @@
-{% extends 'base_bottom.html'%}
-{% block body %}
-	<div class="header_con">
-		<div class="header">
-			<div class="welcome fl">欢迎来到天天生鲜!</div>
-			<div class="fr">
-				<div class="login_info fl">
-					欢迎您：<em>张 山</em>
-				</div>
-				<div class="login_btn fl">
-					<a href="login.html">登录</a>
-					<span>|</span>
-					<a href="register.html">注册</a>
-				</div>
-				<div class="user_link fl">
-					<span>|</span>
-					<a href="user_center_info.html">用户中心</a>
-					<span>|</span>
-					<a href="cart.html">我的购物车</a>
-					<span>|</span>
-					<a href="user_center_order.html">我的订单</a>
-				</div>
-			</div>
-		</div>		
-	</div>
+{% extends 'user_base.html'%}
+{% block body1 %}
+
 
 	<div class="search_bar clearfix">
-		<a href="index.html" class="logo fl"><img src="images/logo.png"></a>
+		<a href="index.html" class="logo fl"><img src="/static/images/logo.png"></a>
 		<div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;用户中心</div>
 		<div class="search_con fr">
 			<input type="text" class="input_text fl" name="" placeholder="搜索商品">
@@ -56,7 +34,7 @@
 				<div class="has_view_list">
 					<ul class="goods_type_list clearfix">
 				<li>
-					<a href="detail.html"><img src="images/goods/goods003.jpg"></a>
+					<a href="detail.html"><img src="/static/images/goods/goods003.jpg"></a>
 					<h4><a href="detail.html">大兴大棚草莓</a></h4>
 					<div class="operate">
 						<span class="prize">￥16.80</span>
@@ -66,7 +44,7 @@
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods004.jpg"></a>
+					<a href="#"><img src="/static/images/goods/goods004.jpg"></a>
 					<h4><a href="#">吐鲁番梨光杏</a></h4>
 					<div class="operate">
 						<span class="prize">￥5.50</span>
@@ -76,7 +54,7 @@
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods005.jpg"></a>
+					<a href="#"><img src="/static/images/goods/goods005.jpg"></a>
 					<h4><a href="#">黄肉桃</a></h4>
 					<div class="operate">
 						<span class="prize">￥10.00</span>
@@ -86,7 +64,7 @@
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods006.jpg"></a>
+					<a href="#"><img src="/static/images/goods/goods006.jpg"></a>
 					<h4><a href="#">进口西梅</a></h4>
 					<div class="operate">
 						<span class="prize">￥28.80</span>
@@ -96,7 +74,7 @@
 				</li>
 
 				<li>
-					<a href="#"><img src="images/goods/goods007.jpg"></a>
+					<a href="#"><img src="/static/images/goods/goods007.jpg"></a>
 					<h4><a href="#">香梨</a></h4>
 					<div class="operate">
 						<span class="prize">￥6.45</span>
@@ -108,4 +86,4 @@
 		</div>
 		</div>
 	</div>
-{% endblock body%}
+{% endblock body1%}

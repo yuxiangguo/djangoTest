@@ -134,7 +134,7 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR, 'static')
 ]
 #开发阶段上传目录
-MEDIA_DIR = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/df_goods/')
 #部署阶段上传目录
 #MEDIA_DIR = /var/www/tiantian/static
 

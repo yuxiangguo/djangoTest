@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^user/', include('df_user.urls', namespace = 'df_user')),
     url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^', include('df_goods.urls', namespace = 'df_user')),
 ]

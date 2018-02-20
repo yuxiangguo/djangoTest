@@ -8,6 +8,9 @@ class TypeInfo(models.Model):
     #标题
     ttitle = models.CharField(max_length=20)
     isDelete = models.BooleanField(default=20)
+    def __str__(self):
+        return self.ttitle.encode('utf-8')
+
 
 class GoodsInfo(models.Model):
     '''商品类'''
@@ -18,6 +21,8 @@ class GoodsInfo(models.Model):
     #价格
     gprice = models.DecimalField(max_digits=5,decimal_places=2)
     isDelete = models.BooleanField()
+    #单位
+    gunit = models.CharField(max_length=20, default='500g')
     #人气
     gclick = models.IntegerField()
     #简介
@@ -27,3 +32,6 @@ class GoodsInfo(models.Model):
     #商品详情
     gcontent = HTMLField()
     gtype = models.ForeignKey(TypeInfo)
+
+    def __str__(self):
+        return self.gtitle.encode('utf-8')
